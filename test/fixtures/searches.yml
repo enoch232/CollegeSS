@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  keyword: MyString
+  minprice: 9.99
+  maxprice: 9.99
+  category: MyString
+  specific_category: MyString
+  condition: 1
+  school: MyString
+  state: MyString
+
+two:
+  keyword: MyString
+  minprice: 9.99
+  maxprice: 9.99
+  category: MyString
+  specific_category: MyString
+  condition: 1
+  school: MyString
+  state: MyString
