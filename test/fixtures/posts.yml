@@ -10,7 +10,7 @@ one:
   condition: 1
   category: MyString
   specific_category: MyString
-  user_id: one
+  user: one
 
 two:
   title: MyString
@@ -22,4 +22,4 @@ two:
   condition: 1
   category: MyString
   specific_category: MyString
-  user_id: two
+  user: two

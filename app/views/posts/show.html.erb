@@ -1,2 +1,37 @@
-<h1>Posts#show</h1>
-<p>Find me in app/views/posts/show.html.erb</p>
+<h1 style = "text-align:center;color:white">Post</h1>
+<div style = "text-align:center;">
+	<div style = "text-align:left;box-shadow: 10px 10px 10px 10px black;width:80%;display:inline-block;padding:10px;background-color:white" >
+		<div style = "text-align:center;font-size:4rem"><%= @post.title %> -
+			<span style ="color:#1abc9c;">$<%= number_with_precision(@post.price, precision: 2)%></span></div>
+		<div style = "text-align:center">At <%= @post.school.capitalize %>, <%= @post.state.upcase %> </div>
+		<div style = "font-size:1rem;text-align:center">
+			<% case @post.condition %>
+			<% when 1 %>
+				<p style = "color:black">New Condition</p>
+			<% when 2 %>
+				<p style = "color:black">Excellent Condition</p>
+			<% when 3 %>
+				<p style = "color:black">Great Condition</p>
+			<% when 4 %>
+				<p style = "color:black">Acceptable Condition</p>
+			<% when 5 %>
+				<p style = "color:black">Bad Condition</p>
+			<% else %>
+				<p>Condition Unknown</p>
+			<% end %> 
+		</div>
+		<div class = "jumbotron" style = "padding:1rem" >
+			<%= @post.description %>
+		</div>
+		<% @post.pictures.each do |pic| %>
+			<%= image_tag pic.image.url(:thumb) %>
+		<% end %>
+		<div style = "text-align:center">
+			<% if @post.user == current_user %>
+				<%= link_to "delete", @post, method: :delete , data: { confirm: "Are you sure?" }, class: 'btn btn-danger' %>
+				<%= link_to "Edit", edit_post_path(@post), class: "btn btn-default" %>
+			<% end %>
+			<%= link_to "Back", root_path, class: "btn btn-default" %>
+		</div>
+	</div>
+</div>

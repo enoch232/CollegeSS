@@ -1,0 +1,6 @@
+<%= div_for(@posts) do %>
+	<% @posts = Post.all.where(["title LIKE ?","%#{params[:search]}%"]) if params[:search].present? %>
+	<% @posts.each do |post| %>
+			<%= render "post", post: post %>
+	<% end %>
+<% end %>

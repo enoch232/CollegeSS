@@ -1,2 +1,9 @@
-<h1>Searches#show</h1>
-<p>Find me in app/views/searches/show.html.erb</p>
+<h1>Show results</h1>
+<% if @search.properties.empty? %>
+	<div>No records found. </div>
+<% else %>
+	<% @search.properties.each do |p| %>
+		<%= render "posts/post", post: p %>
+	<% end %>
+
+<% end %>

@@ -1,2 +1,49 @@
-<h1>Searches#new</h1>
-<p>Find me in app/views/searches/new.html.erb</p>
+<h1 style = "text-align:center;color:white">Advanced Search</h1>
+<div style = "text-align:center;">
+	<div style = "text-align:left;box-shadow: 10px 10px 10px 10px black;width:60%;display:inline-block;padding:10px;background-color:white" >
+		<%= form_for @search do |f| %>
+			<br>
+			<%= f.label :keyword %>
+			
+			<%= f.text_field :keyword %>
+			<br>
+			<%= f.label :category %>
+			
+			<%= f.select :category, options_for_select([['Textbooks','textbooks'],['Electronics','electronics']],1), include_blank: true %>
+			<br>
+			<%= f.label :minprice %>
+			
+			<%= f.text_field :minprice %>
+			<br>
+			<%= f.label :maxprice %>
+			
+			<%= f.text_field :maxprice %>
+			<br>
+			<%= f.label :condition %>
+			
+			<%= f.select :condition, options_for_select(
+			  [
+			    ['New', 1],
+			    ['Excellent', 2],
+			    ['Great', 3],
+			    ['Acceptable', 4],
+			    ['Bad', 5]
+
+			  ], 0), include_blank: true %>
+			<br>
+			<%= f.label :specific_category %>
+			
+			<%= f.select :specific_category, options_for_select([["CSE","cse"],["CIS","cis"]],1), include_blank: true %>
+			<br>
+			<%= f.label :state %>
+			
+			<%= f.select :state, options_for_select([["AZ", "az"]], 1), include_blank: true %> 
+			<br>
+			<%= f.label :school %>
+			
+			<%= f.text_field :school %>
+			<br>
+			<%= f.submit "Search", class: "btn btn-default" %>
+		<% end %>
+	</div>
+</div>

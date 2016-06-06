@@ -1,23 +1,8 @@
 Rails.application.routes.draw do
-  get 'searches/new'
-
-  get 'searches/create'
-
-  get 'searches/show'
-
-  get 'posts/index'
-
-  get 'posts/show'
-
-  get 'posts/new'
-
-  get 'posts/create'
-
-  get 'posts/destroy'
-
-  get 'posts/edit'
-
-  get 'posts/update'
+  devise_for :users
+  resources :posts
+  resources :searches
+  root 'posts#index'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
