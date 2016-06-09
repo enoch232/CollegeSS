@@ -1,0 +1,5 @@
+$('.postholder').empty();
+"<% @posts.each do |post| %>";
+
+$('.postholder').append("<%= j render 'post', post: post %>");
+"<% end %>";

@@ -1,0 +1,33 @@
+<div style = "text-align:center;">
+	<div style = "text-align:center;box-shadow: 10px 10px 10px 10px black;width:80%;display:inline-block;padding:10px;background-color:white" >
+		<%= form_for (@post), html: { multipart: true } do |f| %>
+			<%= f.label :title %><br>
+			<%= f.text_field :title, maxlength: 27 %><br>
+			<%= f.label :condition %><br>
+			<%= f.select :condition, options_for_select(
+			  [
+			    ['New', 1],
+			    ['Excellent', 2],
+			    ['Great', 3],
+			    ['Acceptable', 4],
+			    ['Bad', 5]
+
+			  ], 1) %><br>
+			<%= f.label :images %><br>
+			<%= file_field_tag "images[]", type: :file, multiple: :true, style: "display:inline-block" %><br>
+			<%= f.label :description %><br>
+			<%= f.text_area :description , style: "width:60rem;height:20rem;resize:none"%><br>
+			<%= f.label :price %><br>
+			<%= f.text_field :price %><br>
+			<%= f.label :category %><br>
+			<%= f.select :category, options_for_select([['Textbooks','textbooks'],['Electronics','electronics']],1) %><br>
+			<%= f.label :major %><br>
+			<%= f.select :specific_category, options_for_select([["CSE","cse"],["CIS","cis"]],1) %><br>
+			<%= f.label :state %><br>
+			<%= f.select :state, options_for_select([["AZ", "az"]], 1) %> <br>
+			<%= f.label :school %><br>
+			<%= f.text_field :school %><br>
+			<%= f.submit class: "btn btn-default" %>
+		<% end %>
+	</div>
+</div>

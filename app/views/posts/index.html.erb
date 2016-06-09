@@ -1,0 +1,28 @@
+<div>
+	
+	<div style = "width:100%;height:600px;background-color:#1abc9c;text-align:center;" id = "block" >
+		<div style = "height:100px" id = "spacer">
+		</div>
+		
+		<%= form_tag posts_path, method: :get, remote: true do %>
+			<div style = "text-align:center;display:inline-block">
+				<%= text_field_tag :search, params[:search], placeholder: "Search...", class: "form-control simple-search", style: "float:left" %>
+				<%= button_tag "", type: 'submit', :name => nil, class: "btn btn-default simple-search-btn glyphicon glyphicon-search", style: "float:right" %>
+			</div>
+		<% end %>
+		<%= link_to "Advanced Search",new_search_path, style: "text-decoration:none;color:white" %>
+	</div>
+	<div class = "postholder">
+
+	</div>
+	
+
+</div>
+<script>
+	$(document).ready(function(){
+		$('.simple-search-btn').click(function(){
+			$('#block').animate({height: "250px"});
+			$('.postholder').fadeIn(1400);
+		});
+	});
+</script>
