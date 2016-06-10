@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 20160609080944) do
     t.string   "title"
     t.text     "description"
     t.decimal  "price"
-    t.string   "keywords"
+    t.string   "keyword"
     t.string   "state"
     t.string   "school"
     t.integer  "condition"

@@ -4,7 +4,7 @@ class CreatePosts < ActiveRecord::Migration[5.0]
       t.string :title
       t.text :description
       t.decimal :price
-      t.string :keywords
+      t.string :keyword
       t.string :state
       t.string :school
       t.integer :condition

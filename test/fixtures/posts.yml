@@ -4,7 +4,7 @@ one:
   title: MyString
   description: MyText
   price: 9.99
-  keywords: MyString
+  keyword: MyString
   state: MyString
   school: MyString
   condition: 1
@@ -16,7 +16,7 @@ two:
   title: MyString
   description: MyText
   price: 9.99
-  keywords: MyString
+  keyword: MyString
   state: MyString
   school: MyString
   condition: 1
