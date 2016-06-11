@@ -36,7 +36,9 @@
         <%= f.label "Profile Photo" %>
         <%= f.file_field :profilephoto %>
       </div>
-
+      <div>
+        <%= image_tag(current_user.profilephoto.url(:medium)) %>
+      </div>
       <div class="actions">
         <%= f.submit "Update", class: "btn btn-default"  %>
       </div>
