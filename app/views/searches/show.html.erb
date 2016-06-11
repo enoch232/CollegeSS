@@ -1,9 +1,9 @@
-<h1>Show results</h1>
-<% if @search.properties.empty? %>
+<% if @search.empty? %>
 	<div>No records found. </div>
 <% else %>
-	<% @search.properties.each do |p| %>
+	<% @search.each do |p| %>
 		<%= render "posts/post", post: p %>
 	<% end %>
+	<%= will_paginate @search %>
 
 <% end %>

@@ -8,7 +8,7 @@ class SearchesController < ApplicationController
 		redirect_to @search
 	end
 	def show 
-		@search = Search.find(params[:id])
+		@search = Search.find(params[:id]).properties.paginate(:page => params[:page], :per_page => 12).order("created_at DESC")
 	end
 	private
 	def search_params
