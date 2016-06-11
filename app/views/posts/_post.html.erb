@@ -1,12 +1,13 @@
 
 <%= div_for(post) do %>
+	<%= link_to post do %>
 	<div style = "box-shadow:5px 5px 5px 5px black;background-color:white;width:300px;overflow:hidden;display:inline-block;margin:8px;float:left;height:46rem">
 		<div style = "font-size:1.3rem">
 			Posted <%= time_ago_in_words(post.created_at)%> ago by <%= post.user.name %>
 		</div>
 		<div style = "">
 			<% post.pictures.limit(1).each do |pic| %>
-				<%= link_to image_tag(pic.image.url(:medium)), post %>
+				<%= image_tag(pic.image.url(:medium)) %>
 			<% end %>
 		</div>
 		<div style = "background-color:#1abc9c">
@@ -26,10 +27,10 @@
 					<p>Unknown</p>
 				<% end %> 
 			</div>
-			<div style ="text-align:center">
+			<div style ="text-align:center;color:black;">
 				<%= post.title %>
 			</div>
-			<div style ="text-align:left;font-size:1.5rem">
+			<div style ="text-align:left;font-size:1.5rem;color:black;">
 				<%= post.description %>
 			</div>
 			<div style ="text-align:center;color:red">
@@ -38,4 +39,5 @@
 
 		</div>
 	</div>
+	<% end %>
 <% end %>

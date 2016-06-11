@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   before_action :set_post, only: [:show, :destroy, :update, :edit]
   before_action :authenticate_user! , except: [:index]
   def index
-    
+    @search = Search.new
     @posts = Post.all
     @posts = Post.all.where(["title LIKE ?","%#{params[:search]}%"]) if params[:search].present?
     respond_to do |format|

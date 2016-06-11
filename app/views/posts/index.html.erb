@@ -6,8 +6,8 @@
 		
 		<%= form_for @search do |f| %>
 			<div style = "text-align:center;display:inline-block">
-				<%= f.text_field :search, placeholder: "Search...", class: "form-control simple-search", style: "float:left" %>
-				<%= f.submit "", class: "btn btn-default simple-search-btn glyphicon glyphicon-search", style: "float:right" %>
+				<%= f.text_field :keyword, placeholder: "Search...", class: "form-control simple-search", style: "float:left" %>
+				<%= button_tag "", type: 'submit', :name => nil, class: "btn btn-default simple-search-btn glyphicon glyphicon-search", style: "float:right" %>
 			</div>
 		<% end %>
 		<%= link_to "Advanced Search",new_search_path, style: "text-decoration:none;color:white" %>
