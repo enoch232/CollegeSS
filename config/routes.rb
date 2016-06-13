@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users
-  resources :posts
-  resources :searches
-  resources :conversations
+  resources :posts, :searches, :conversations
   root 'posts#index'
+  mount ActionCable.server => '/cable'
+
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
