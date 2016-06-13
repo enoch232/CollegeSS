@@ -4,6 +4,7 @@
 	<% @search.each do |p| %>
 		<%= render "posts/post", post: p %>
 	<% end %>
-	<%= will_paginate @search %>
-
+	<div style = "width:100%;">
+		<%= will_paginate @search %>
+	</div>
 <% end %>
