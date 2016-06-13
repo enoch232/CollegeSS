@@ -30,6 +30,7 @@
 	      <ul class="nav navbar-nav" style = "float:right">
 		      <% if user_signed_in? %>
 				<li><%= link_to "Sell", new_post_path %></li>
+				<li><%= link_to "Message", conversations_path %></li>
 				<li><%= link_to "Sign Out", destroy_user_session_path , method: :delete %></li>
 			  <% else %>
 		        <li><%= link_to "Sign In", new_user_session_path %></li>
