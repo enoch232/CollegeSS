@@ -1,9 +1,11 @@
 <div class = "jumbotron" style = "font-size:3rem;text-align:center">List of Conversations</div>
 <div>
 	<div>
-		<div class = "new-message-button" style = "height:3rem;cursor:pointer;background-color:green">
-			New Message
-		</div>
+		<%= link_to new_conversation_path do %>
+			<div class = "new-message-button" style = "height:3rem;cursor:pointer;background-color:green">
+				New Message
+			</div>
+		<% end %>
 	</div>
 	<div class = "conversations-holder">
 		<% @conversations.each do |conversation| %>

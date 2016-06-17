@@ -5,7 +5,14 @@
 	<div>
 		<%= form_for(@conversation) do |f| %>
 		<%= f.label "Send to" %>
-		<%= f.text_field :%>
+		<br>
+		<%= f.text_field :receiver%>
+		<br>
+		<%= f.label "Message" %>
+		<br>
+		<%= text_area_tag :newmessage %>
+		<br>
+		<%= f.submit %>
 		<% end %>
 	</div>
 </div>
