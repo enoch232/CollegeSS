@@ -1,1 +1,11 @@
-Messages
+<h1>List of Conversations</h1>
+<div>
+	<div>
+	</div>
+	<div>
+		<%= @conversations.each do |conversation| %>
+			Sender:<%= conversation.sender %> Receiver: <%= conversation.receiver %>
+		<% end %>
+	</div>
+
+</div>
