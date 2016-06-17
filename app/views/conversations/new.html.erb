@@ -1,0 +1,11 @@
+<div>
+	<div class = "jumbotron">
+		New Message
+	</div>
+	<div>
+		<%= form_for(@conversation) do |f| %>
+		<%= f.label "Send to" %>
+		<%= f.text_field :%>
+		<% end %>
+	</div>
+</div>

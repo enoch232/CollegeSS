@@ -1,11 +1,13 @@
-<h1>List of Conversations</h1>
+<div class = "jumbotron" style = "font-size:3rem;text-align:center">List of Conversations</div>
 <div>
 	<div>
+		<div class = "new-message-button" style = "height:3rem;cursor:pointer;background-color:green">
+			New Message
+		</div>
 	</div>
-	<div>
-		<%= @conversations.each do |conversation| %>
+	<div class = "conversations-holder">
+		<% @conversations.each do |conversation| %>
 			Sender:<%= conversation.sender %> Receiver: <%= conversation.receiver %>
 		<% end %>
 	</div>
-
 </div>
