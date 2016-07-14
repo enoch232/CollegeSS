@@ -10,7 +10,6 @@ class PostsController < ApplicationController
       format.js{}
     end
   end
-
   def show
 
   end
@@ -33,7 +32,6 @@ class PostsController < ApplicationController
     else
       render :new
     end
-      
   end
   def destroy
     @post.destroy
@@ -47,10 +45,7 @@ class PostsController < ApplicationController
     else
       render :edit
     end
-
-
   end
-  
   private
   def set_post
     @post = Post.find(params[:id])

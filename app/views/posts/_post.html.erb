@@ -13,15 +13,15 @@
 		<div style = "background-color:#1abc9c">
 			<div style = "font-size:1rem;text-align:center">
 				<% case post.condition %>
-				<% when 1 %>
+				<% when "new" %>
 					<p style = "color:white">New</p>
-				<% when 2 %>
+				<% when "excellent" %>
 					<p style = "color:white">Excellent</p>
-				<% when 3 %>
+				<% when "great" %>
 					<p style = "color:white">Great</p>
-				<% when 4 %>
+				<% when "acceptable" %>
 					<p style = "color:white">Acceptable</p>
-				<% when 5 %>
+				<% when "bad" %>
 					<p style = "color:white">Bad</p>
 				<% else %>
 					<p>Unknown</p>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160613015656) do
+ActiveRecord::Schema.define(version: 20160617205641) do
 
   create_table "conversations", force: :cascade do |t|
     t.integer  "sender"
@@ -23,8 +23,9 @@ ActiveRecord::Schema.define(version: 20160613015656) do
   create_table "messages", force: :cascade do |t|
     t.integer  "user_id"
     t.text     "text"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.integer  "conversation_id"
   end
 
   create_table "pictures", force: :cascade do |t|
@@ -44,7 +45,7 @@ ActiveRecord::Schema.define(version: 20160613015656) do
     t.string   "keyword"
     t.string   "state"
     t.string   "school"
-    t.integer  "condition"
+    t.string   "condition"
     t.string   "category"
     t.string   "specific_category"
     t.integer  "user_id"

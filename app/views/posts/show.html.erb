@@ -6,15 +6,15 @@
 		<div style = "text-align:center">At <%= @post.school.capitalize %>, <%= @post.state.upcase %> </div>
 		<div style = "font-size:1rem;text-align:center">
 			<% case @post.condition %>
-			<% when 1 %>
+			<% when "new" %>
 				<p style = "color:black">New Condition</p>
-			<% when 2 %>
+			<% when "excellent" %>
 				<p style = "color:black">Excellent Condition</p>
-			<% when 3 %>
+			<% when "great" %>
 				<p style = "color:black">Great Condition</p>
-			<% when 4 %>
+			<% when "acceptable" %>
 				<p style = "color:black">Acceptable Condition</p>
-			<% when 5 %>
+			<% when "bad" %>
 				<p style = "color:black">Bad Condition</p>
 			<% else %>
 				<p>Condition Unknown</p>

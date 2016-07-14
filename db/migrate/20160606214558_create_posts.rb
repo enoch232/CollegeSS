@@ -7,7 +7,7 @@ class CreatePosts < ActiveRecord::Migration[5.0]
       t.string :keyword
       t.string :state
       t.string :school
-      t.integer :condition
+      t.string :condition
       t.string :category
       t.string :specific_category
       t.references :user, foreign_key: true
