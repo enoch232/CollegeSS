@@ -1,6 +1,6 @@
 <h1 style = "text-align:center;color:white">Post</h1>
 <div style = "text-align:center;">
-	<div style = "text-align:left;box-shadow: 10px 10px 10px 10px black;width:80%;display:inline-block;padding:10px;background-color:white" >
+	<div style = "text-align:left;width:80%;display:inline-block;padding:10px;background-color:white" >
 		<div style = "text-align:center;font-size:4rem"><%= @post.title %> -
 			<span style ="color:#1abc9c;">$<%= number_with_precision(@post.price, precision: 2)%></span></div>
 		<div style = "text-align:center">At <%= @post.school.capitalize %>, <%= @post.state.upcase %> </div>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160617205641) do
+ActiveRecord::Schema.define(version: 20160714052928) do
 
   create_table "conversations", force: :cascade do |t|
     t.integer  "sender"
@@ -85,6 +85,9 @@ ActiveRecord::Schema.define(version: 20160617205641) do
     t.string   "profilephoto_content_type"
     t.integer  "profilephoto_file_size"
     t.datetime "profilephoto_updated_at"
+    t.boolean  "member"
+    t.datetime "membership_start"
+    t.datetime "membership_end"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
