@@ -23,6 +23,7 @@
 		<div class = "jumbotron" style = "padding:1rem" >
 			<%= @post.description %>
 		</div>
+		<a href = "<%= @post.pictures.first.image.url %>" data-lightbox = "image-1">jee</a>
 		<% @post.pictures.each do |pic| %>
 			<%= image_tag pic.image.url(:thumb) %>
 		<% end %>

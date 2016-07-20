@@ -3,6 +3,7 @@
 <head>
   <title>Collegestuffsale</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <link href=".../node_modules/lightbox2/dist/css/lightbox.min.css" rel="stylesheet">
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
@@ -41,10 +42,9 @@
 	    </div>
 	  </div>
 	</nav>
-	
-	
+	<a href = "<%= @posts.first.pictures.first.image.url %>" data-lightbox = "image-1">jee</a>
 	<%= yield %>
-
+<script src="..../node_modules/lightbox2/dist/js/lightbox-plus-jquery.min.js"></script>
 </body>
 <script>
 $(document).ready(function(){
