@@ -1,3 +1,5 @@
+
+<body>
 <h1 style = "text-align:center;color:white">Post</h1>
 <div style = "text-align:center;">
 	<div style = "text-align:left;width:80%;display:inline-block;padding:10px;background-color:white" >
@@ -25,8 +27,10 @@
 		</div>
 		<a href = "<%= @post.pictures.first.image.url %>" data-lightbox = "image-1">jee</a>
 		<% @post.pictures.each do |pic| %>
-			<%= image_tag pic.image.url(:thumb) %>
+			<a href = "<%= pic.image.url %>" data-lightbox = "image-1"><%= image_tag pic.image.url(:thumb) %></a>
+		
 		<% end %>
+
 		<div style = "text-align:center">
 			<% if @post.user == current_user %>
 				<%= link_to "delete", @post, method: :delete , data: { confirm: "Are you sure?" }, class: 'btn btn-danger' %>
@@ -36,3 +40,6 @@
 		</div>
 	</div>
 </div>
+<script src="./lightbox2/dist/js/lightbox-plus-jquery.min.js"></script>
+</body>
+</html>
